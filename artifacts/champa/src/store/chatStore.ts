@@ -24,7 +24,7 @@ export const useChatStore = create<ChatState>((set) => ({
     }
   ],
   isLoading: false,
-  selectedModel: 'claude-3-haiku',
+  selectedModel: 'meta-llama/llama-3.1-8b-instruct:free',
   isGeneratingImage: false,
   addMessage: (message) => set((state) => ({ messages: [...state.messages, message] })),
   updateMessage: (id, content) => set((state) => ({
