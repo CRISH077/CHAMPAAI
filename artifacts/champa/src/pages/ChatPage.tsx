@@ -9,11 +9,11 @@ import { streamChatCompletion } from '@/services/openrouter';
 import { useVoice } from '@/hooks/useVoice';
 
 const FREE_MODELS = [
-  { id: 'nvidia/llama-3.1-nemotron-ultra-253b-v1:free', label: 'Nemotron Ultra', provider: 'NVIDIA' },
-  { id: 'nvidia/llama-3.3-nemotron-super-49b-v1:free', label: 'Nemotron Super', provider: 'NVIDIA' },
+  { id: 'nvidia/nemotron-3-ultra-550b-a55b:free', label: 'Nemotron 3 Ultra', provider: 'NVIDIA' },
+  { id: 'nvidia/nemotron-3-super-120b-a12b:free', label: 'Nemotron 3 Super', provider: 'NVIDIA' },
   { id: 'openai/gpt-oss-120b:free', label: 'GPT-OSS 120B', provider: 'OpenAI' },
-  { id: 'owloiai/owl-alpha:free', label: 'Owl Alpha', provider: 'Owl' },
-  { id: 'nexagiai/nex-n2-pro:free', label: 'Nex-N2-Pro', provider: 'Nex AGI' },
+  { id: 'openrouter/owl-alpha', label: 'Owl Alpha', provider: 'Owl' },
+  { id: 'nex-agi/nex-n2-pro:free', label: 'Nex-N2-Pro', provider: 'Nex AGI' },
   { id: 'poolside/laguna-m.1:free', label: 'Laguna M.1', provider: 'Poolside' },
 ];
 

@@ -20,7 +20,7 @@ export const useChatStore = create<ChatState>()(
     (set) => ({
       messages: [],
       isLoading: false,
-      selectedModel: 'nvidia/llama-3.1-nemotron-ultra-253b-v1:free',
+      selectedModel: 'openai/gpt-oss-120b:free',
       isGeneratingImage: false,
       addMessage: (message) =>
         set((state) => ({ messages: [...state.messages, message] })),
@@ -36,7 +36,7 @@ export const useChatStore = create<ChatState>()(
       clearMessages: () => set({ messages: [] }),
     }),
     {
-      name: 'champa-chat',
+      name: 'champa-chat-v2',
       partialize: (state) => ({
         messages: state.messages,
         selectedModel: state.selectedModel,
