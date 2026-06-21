@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/champa/"
+title = "CHAMPA"
+version = "1.0.0"
+id = "artifacts/champa"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/champa/" ]
+localPort = 24566
+
+[services.development]
+run = "pnpm --filter @workspace/champa run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/champa", "run", "build" ]
+publicDir = "artifacts/champa/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "24566"
+BASE_PATH = "/champa/"
