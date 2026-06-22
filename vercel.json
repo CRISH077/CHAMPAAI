@@ -1,4 +1,5 @@
 {
+  "framework": "vite",
   "buildCommand": "pnpm --filter @workspace/champa run build",
   "outputDirectory": "artifacts/champa/dist",
   "rewrites": [
