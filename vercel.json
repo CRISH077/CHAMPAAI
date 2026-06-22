@@ -1,0 +1,10 @@
+{
+  "buildCommand": "pnpm --filter @workspace/champa run build",
+  "outputDirectory": "artifacts/champa/dist",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
